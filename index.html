@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fff0f5, #ffe4e1);
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+    header h1 {
+      font-size: 3em;
+      color: #ff1493;
+      margin-bottom: 0;
+    }
+    header p {
+      font-size: 1.3em;
+      color: #444;
+    }
+    video {
+      display: block;
+      margin: 30px auto;
+      max-width: 90%;
+      border: 10px solid #fff;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+    }
+    .message {
+      text-align: center;
+      margin: 50px 20px;
+      font-size: 1.5em;
+      color: #222;
+      line-height: 1.8;
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      transform: rotate(45deg);
+      animation: float 8s linear infinite;
+    }
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+    }
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <audio id="bgAudio" autoplay loop>
+  <source src="Ninna-Snehadinda.mp3" type="audio/mpeg">
+</audio>
+
+  <header>
+    <h1>Happy Birthday, Hubby💖</h1>
+    
+    <div class="message">
+    To the one who makes my heart smile every single day – Happy Birthday! 💝<br/><br/>
+    No words can express how grateful I am to have you in my life.<br/>
+    Here’s to your smile, your strength, and the love we share.<br/>
+    May all your dreams come true, just like mine did when I met you. 🎉
+  </div>
+  
+
+  <video controls autoplay muted loop>
+    <source src="birthday_video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+ <div class="message">
+  📸✨ Biography of a Passionate Soul: My Love✨📸<br/>
+              <center>(Born on 26th June 1998)</center><br/>
+Born into a loving and traditional Lingayath joint family with strong roots in farming and business, he grew up surrounded by values of unity and hard work.<br/>
+As a talented photographer, he has beautifully captured life’s precious moments—from maternity shoots to pre-wedding, weddings, and adorable baby portraits.<br/>
+With over 1,000 followers on Instagram, his lens speaks a language of love, emotion, and art.<br/>
+Like every true artist, he has faced his own battles—struggles. That moment reshaped him into a warrior—a pillar of strength for his family, standing like a rock in their toughest times.<br/>
+Beyond the lens, he’s a vibrant soul who loves to travel, watch movies, sketch, edit photos and videos, and tend to plants.<br/> 
+His creativity blooms not just in his profession, but in every little thing he does.<br/>
+To me, he is not only the world’s best photographer—but also the world’s best life partner.<br/>
+I love him endlessly, and this is just a small tribute to the beautiful person he is—behind the camera and in life.💖
+</div>
+  <p>Best Wishes From Your Putti🙈</p>
+  </header>
+  
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 5 + Math.random() * 5 + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 10000);
+    }
+    setInterval(createHeart, 300);
+  </script>
+
+  <script>
+  window.addEventListener("click", () => {
+    const audio = document.getElementById("bgAudio");
+    if (audio.paused) {
+      audio.play();
+    }
+  });
+</script>
+<div style="text-align: center; margin-top: 30px;">
+  <a href="https://www.instagram.com/rocky_.photography?igsh=cDdjb3I5ZXJzcTI4" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; background-color: #71fa7d; color: rgb(15, 14, 14); border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">
+      📸 View and Fallow His Photography on Instagram
+    </button>
+  </a>
+</div>
+</body>
+</html>
